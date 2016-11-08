@@ -9,6 +9,7 @@
 
 # User
 /.idea/
+/.gradle/
 /tmp/
 /bin/
 /build/
