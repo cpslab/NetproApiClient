@@ -11,5 +11,6 @@
 /.idea/
 /tmp/
 /bin/
+/build/
 *.test
 *.swp
