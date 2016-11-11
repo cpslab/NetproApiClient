@@ -14,6 +14,11 @@ https://github.com/square/okhttp
 
 [JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.okhttp3&a=okhttp&v=LATEST)
 
+## Okio - forsqure
+https://github.com/square/okio
+
+[JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.okio&a=okio&v=LATEST)
+
 # License
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
