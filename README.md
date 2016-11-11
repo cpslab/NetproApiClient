@@ -1,3 +1,7 @@
+# 使用するAPI
+[Livedoor Weather Web Service](http://weather.livedoor.com/weather_hacks/webservice)
+
+
 # Library
 ## gson - google
 https://github.com/google/gson
