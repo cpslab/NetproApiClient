@@ -15,16 +15,7 @@ public class Main {
 
     private static void printWeather() {
         ApiClient apiClient = new ApiClient();
-        apiClient.getWeather(LOCATION_CODE_TOKYO, new ApiClient.ApiClientCallback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onSuccess(Call call, Weather weather) {
-                System.out.println(weather.toString());
-            }
-        });
+        apiClient.getWeather(LOCATION_CODE_TOKYO,
+                (call, weather) -> System.out.println(weather.toString()));
     }
 }

@@ -34,18 +34,15 @@ public class ApiClient {
                 .url(builder.build())
                 .get().build();
 
-        System.out.println(TAG + "enqueue: " + request.url().toString());
-
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                apiClientCallback.onFailure(call, e);
+                e.printStackTrace();
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String result = response.body().string();
-                System.out.println(TAG + "response" + result);
                 apiClientCallback.onSuccess(call,
                         Weather.entityToModel(gson.fromJson(result, WeatherEntity.class)));
             }
@@ -53,8 +50,6 @@ public class ApiClient {
     }
 
     public interface ApiClientCallback {
-
-        void onFailure(Call call, IOException e);
 
         void onSuccess(Call call, Weather weather);
     }
