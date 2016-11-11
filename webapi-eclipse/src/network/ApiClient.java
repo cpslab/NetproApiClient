@@ -1,16 +1,10 @@
 package network;
 
-import java.io.IOException;
-
 import com.google.gson.Gson;
-
 import entity.WeatherEntity;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.HttpUrl;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import okhttp3.*;
+
+import java.io.IOException;
 
 public class ApiClient {
 
@@ -61,14 +55,14 @@ public class ApiClient {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String result = response.body().string();
-                apiClientCallback.onSuccess(call, gson.fromJson(result, WeatherEntity.class));
+                apiClientCallback.onSuccess(call, result);
             }
         });
     }
 
     public interface ApiClientCallback {
 
-        void onSuccess(Call call, WeatherEntity weather);
+        void onSuccess(Call call, String json);
     }
 
     private HttpUrl.Builder buildUrl() {
