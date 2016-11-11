@@ -17,4 +17,12 @@ public class TemperatureItemEntity {
     public float getFahrenheit() {
         return fahrenheit;
     }
+
+    @Override
+    public String toString() {
+        return "TemperatureItemEntity{" +
+                "celsius=" + celsius +
+                ", fahrenheit=" + fahrenheit +
+                '}' + "\n";
+    }
 }

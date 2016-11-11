@@ -17,4 +17,12 @@ public class DescriptionEntity {
     public String getPublicTime() {
         return publicTime;
     }
+
+    @Override
+    public String toString() {
+        return "DescriptionEntity{" +
+                "text='" + text + '\'' +
+                ", publicTime='" + publicTime + '\'' +
+                '}' + "\n";
+    }
 }

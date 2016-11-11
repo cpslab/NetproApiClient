@@ -3,7 +3,6 @@ package webapi.network;
 import com.google.gson.Gson;
 import okhttp3.*;
 import webapi.entity.WeatherEntity;
-import webapi.model.Weather;
 
 import java.io.IOException;
 
@@ -43,14 +42,13 @@ public class ApiClient {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String result = response.body().string();
-                apiClientCallback.onSuccess(call,
-                        Weather.entityToModel(gson.fromJson(result, WeatherEntity.class)));
+                apiClientCallback.onSuccess(call, gson.fromJson(result, WeatherEntity.class));
             }
         });
     }
 
     public interface ApiClientCallback {
 
-        void onSuccess(Call call, Weather weather);
+        void onSuccess(Call call, WeatherEntity weather);
     }
 }

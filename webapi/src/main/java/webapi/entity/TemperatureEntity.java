@@ -17,4 +17,12 @@ public class TemperatureEntity {
     public TemperatureItemEntity getMin() {
         return min;
     }
+
+    @Override
+    public String toString() {
+        return "TemperatureEntity{" +
+                "max=" + max +
+                ", min=" + min +
+                '}' + "\n";
+    }
 }

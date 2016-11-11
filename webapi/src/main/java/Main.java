@@ -1,9 +1,4 @@
-import com.google.gson.Gson;
-import okhttp3.Call;
-import webapi.model.Weather;
 import webapi.network.ApiClient;
-
-import java.io.IOException;
 
 public class Main {
 

@@ -17,4 +17,12 @@ public class LinkEntity {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "LinkEntity{" +
+                "link='" + link + '\'' +
+                ", name='" + name + '\'' +
+                '}' + "\n";
+    }
 }

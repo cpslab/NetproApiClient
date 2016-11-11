@@ -41,4 +41,15 @@ public class ImageEntity {
     public String getHeight() {
         return height;
     }
+
+    @Override
+    public String toString() {
+        return "ImageEntity{" +
+                "title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", url='" + url + '\'' +
+                ", width='" + width + '\'' +
+                ", height='" + height + '\'' +
+                '}' + "\n";
+    }
 }

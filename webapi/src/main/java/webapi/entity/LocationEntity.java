@@ -24,4 +24,13 @@ public class LocationEntity {
     public String getCity() {
         return city;
     }
+
+    @Override
+    public String toString() {
+        return "LocationEntity{" +
+                "area='" + area + '\'' +
+                ", pref='" + pref + '\'' +
+                ", city='" + city + '\'' +
+                '}' + "\n";
+    }
 }

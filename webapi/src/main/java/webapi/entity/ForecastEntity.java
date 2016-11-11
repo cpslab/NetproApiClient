@@ -41,4 +41,15 @@ public class ForecastEntity {
     public TemperatureEntity getTemperature() {
         return temperature;
     }
+
+    @Override
+    public String toString() {
+        return "ForecastEntity{" +
+                "date='" + date + '\'' +
+                ", dateLabel='" + dateLabel + '\'' +
+                ", telop='" + telop + '\'' +
+                ", image=" + image +
+                ", temperature=" + temperature +
+                '}' + "\n";
+    }
 }

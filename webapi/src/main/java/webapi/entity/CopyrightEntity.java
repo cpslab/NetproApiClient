@@ -33,4 +33,14 @@ public class CopyrightEntity {
     public List<LinkEntity> getProvider() {
         return provider;
     }
+
+    @Override
+    public String toString() {
+        return "CopyrightEntity{" +
+                "title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", image=" + image +
+                ", provider=" + provider +
+                '}' + "\n";
+    }
 }

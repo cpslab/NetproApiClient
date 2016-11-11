@@ -61,4 +61,18 @@ public class WeatherEntity {
     public CopyrightEntity getCopyright() {
         return copyright;
     }
+
+    @Override
+    public String toString() {
+        return "WeatherEntity{" +
+                "location=" + location +
+                ", title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", publicTime='" + publicTime + '\'' +
+                ", description=" + description +
+                ", forecasts=" + forecasts +
+                ", pinpointLocations=" + pinpointLocations +
+                ", copyright=" + copyright +
+                '}';
+    }
 }
