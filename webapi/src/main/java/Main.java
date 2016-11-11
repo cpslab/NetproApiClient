@@ -26,5 +26,7 @@ public class Main {
                 System.out.println(weather.toString());
             }
         });
+
+        apiClient.getWeather(LOCATION_CODE_TOKYO, (call, e) -> {}, (call, weather) -> {});
     }
 }

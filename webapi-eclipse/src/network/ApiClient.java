@@ -52,8 +52,6 @@ public class ApiClient {
                 .url(builder.build())
                 .get().build();
 
-        System.out.println(TAG + "enqueue: " + request.url().toString());
-
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -63,7 +61,6 @@ public class ApiClient {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String result = response.body().string();
-                System.out.println(TAG + "response" + result);
                 apiClientCallback.onSuccess(call, gson.fromJson(result, WeatherEntity.class));
             }
         });
