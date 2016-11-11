@@ -9,11 +9,16 @@ public class WeatherEntity {
 	public String title;
 	public String link;
 	public String publicTime;
-	public List<ForecastEntity> forecastList;
-	
+	public List<ForecastEntity> forecasts;
+
 	@Override
 	public String toString() {
-		Gson gson = new Gson();
-		return gson.toJson(this);
+		return "WeatherEntity{" + "\n" +
+				"location=" + location + "\n" +
+				", title='" + title + '\'' + "\n" +
+				", link='" + link + '\'' + "\n" +
+				", publicTime='" + publicTime + '\'' + "\n" +
+				", forecasts=" + forecasts + "\n" +
+				'}';
 	}
 }

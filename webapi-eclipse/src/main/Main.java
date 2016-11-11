@@ -10,6 +10,8 @@ import okhttp3.Call;
 /**
  * API ドキュメント
  * http://weather.livedoor.com/weather_hacks/webservice
+ *
+ * 東京のロケーションコードは400040
  */
 public class Main {
 	
