@@ -55,7 +55,7 @@ public class ApiClient {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                apiClientCallback.onFailure(call, e);
+            	e.printStackTrace();
             }
 
             @Override
@@ -67,8 +67,6 @@ public class ApiClient {
     }
 
     public interface ApiClientCallback {
-
-        void onFailure(Call call, IOException e);
 
         void onSuccess(Call call, WeatherEntity weather);
     }
