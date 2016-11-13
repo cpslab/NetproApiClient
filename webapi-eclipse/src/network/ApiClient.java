@@ -49,12 +49,28 @@ public class ApiClient {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-            	e.printStackTrace();
+                if (apiClientCallback == null) {
+                    System.out.println("apiClientCallback is null");
+                    return;
+                }
+
+                apiClientCallback.onFailure(call, e);
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                String result = response.body().string();
+            public void onResponse(Call call, Response response) {
+                if (apiClientCallback == null) {
+                    System.out.println("apiClientCallback is null");
+                    return;
+                }
+
+                String result = null;
+                try {
+                    result = response.body().string();
+                } catch (IOException e) {
+                    apiClientCallback.onFailure(call, e);
+                }
+
                 apiClientCallback.onSuccess(call, result);
             }
         });
@@ -63,6 +79,8 @@ public class ApiClient {
     public interface ApiClientCallback {
 
         void onSuccess(Call call, String json);
+
+        void onFailure(Call call, IOException e);
     }
 
     private HttpUrl.Builder buildUrl() {

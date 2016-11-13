@@ -28,11 +28,18 @@ public class Main {
 			public void onSuccess(Call call, String json) {
                 WeatherEntity weather = gson.fromJson(json, WeatherEntity.class);
 
-				System.out.print(weather.forecasts.get(1).date + "の天気: ");
-				System.out.println(weather.forecasts.get(1).telop);
+				System.out.println(weather.toString());
 
-				LocationEntity location = weather.location;
-				System.out.print(location.area+location.pref+location.city);
+				System.out.print(weather.getForecasts().get(1).getDate() + "の天気: ");
+				System.out.println(weather.getForecasts().get(1).getTelop());
+
+				LocationEntity location = weather.getLocation();
+				System.out.print(location.getArea() + location.getPref() + location.getCity());
+			}
+
+			@Override
+			public void onFailure(Call call, IOException e) {
+				e.printStackTrace();
 			}
 		});
 

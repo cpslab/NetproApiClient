@@ -36,11 +36,21 @@ public class ApiClient {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
+                if (apiClientCallback == null) {
+                    System.out.println("apiClientCallback is null");
+                    return;
+                }
+
+                apiClientCallback.onFailure(call, e);
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
+                if (apiClientCallback == null) {
+                    System.out.println("apiClientCallback is null");
+                    return;
+                }
+
                 String result = response.body().string();
                 apiClientCallback.onSuccess(call, gson.fromJson(result, WeatherEntity.class));
             }
@@ -50,5 +60,7 @@ public class ApiClient {
     public interface ApiClientCallback {
 
         void onSuccess(Call call, WeatherEntity weather);
+
+        void onFailure(Call call, IOException e);
     }
 }
