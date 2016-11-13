@@ -1,2 +1,0 @@
-# netpro api client
-がんばるぞい
