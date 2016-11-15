@@ -3,6 +3,7 @@ package main;
 import java.io.IOException;
 
 import com.google.gson.Gson;
+import entity.ForecastEntity;
 import entity.LocationEntity;
 import entity.WeatherEntity;
 import network.ApiClient;
@@ -28,13 +29,10 @@ public class Main {
 			public void onSuccess(Call call, String json) {
                 WeatherEntity weather = gson.fromJson(json, WeatherEntity.class);
 
-				System.out.println(weather.toString());
+				ForecastEntity forecast = weather.getForecasts().get(1);
 
-				System.out.print(weather.getForecasts().get(1).getDate() + "の天気: ");
-				System.out.println(weather.getForecasts().get(1).getTelop());
-
-				LocationEntity location = weather.getLocation();
-				System.out.print(location.getArea() + location.getPref() + location.getCity());
+				System.out.print(forecast.getDate() + "の天気: ");
+				System.out.println(forecast.getTelop());
 			}
 
 			@Override
