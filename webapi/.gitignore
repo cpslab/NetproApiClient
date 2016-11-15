@@ -9,6 +9,9 @@
 .classpath
 .settings
 
+# idea
+*.iml
+
 # Maven
 target
 
@@ -21,6 +24,7 @@ target
 *.log
 *.swp
 *.bak
+/lib/
 
 # OS
 Thumbs.db
