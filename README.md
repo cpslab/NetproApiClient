@@ -20,7 +20,7 @@ https://github.com/square/okio
 [JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.okio&a=okio&v=LATEST)
 
 ## 説明資料
-http://nshiba.hatenablog.com/entry/2016/11/22/003111
+[Okhttp + Gson を使ったJavaによるWebAPI入門](http://nshiba.hatenablog.com/entry/2016/11/22/003111)
 
 # License
 ```
