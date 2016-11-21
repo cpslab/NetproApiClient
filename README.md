@@ -9,12 +9,12 @@ https://github.com/google/gson
 [JARダウンロードはこちら](http://repo1.maven.org/maven2/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar)
 
 
-## Okhttp - forsqure
+## Okhttp - square
 https://github.com/square/okhttp
 
 [JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.okhttp3&a=okhttp&v=LATEST)
 
-## Okio - forsqure
+## Okio - square
 https://github.com/square/okio
 
 [JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.okio&a=okio&v=LATEST)
