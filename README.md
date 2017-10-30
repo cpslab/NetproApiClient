@@ -31,8 +31,22 @@ https://github.com/square/okio
 
 [JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.okio&a=okio&v=LATEST)
 
+### Gradle
+
 ```
 compile 'com.squareup.okio:okio:1.13.0'
+```
+
+## Retrofit - square
+https://github.com/square/retrofit
+
+[JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.retrofit2&a=retrofit&v=LATEST)
+
+
+### Gradle
+
+```
+compile 'com.squareup.retrofit2:retrofit:2.3.0'
 ```
 
 ## 説明資料
