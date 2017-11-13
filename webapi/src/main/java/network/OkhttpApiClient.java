@@ -1,26 +1,15 @@
 package network;
 
 import com.google.gson.Gson;
-import entity.WeatherEntity;
 import okhttp3.*;
 
 import java.io.IOException;
 
-public class ApiClient {
+import static network.ApiConsts.*;
 
-    public static final String SCHEME = "http";
+public class OkhttpApiClient {
 
-    public static final String HOST = "weather.livedoor.com";
-
-    public static final String FORECAST = "forecast";
-
-    public static final String WEB_SERVICE = "webservice";
-
-    public static final String JSON = "json";
-
-    public static final String ROOT = "v1";
-
-    public static final String TAG = "DEBUG: " + ApiClient.class.getSimpleName() + ": ";
+    public static final String TAG = "DEBUG: " + OkhttpApiClient.class.getSimpleName() + ": ";
 
     private OkHttpClient client = new OkHttpClient();
 

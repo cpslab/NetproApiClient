@@ -6,7 +6,13 @@
 ## gson - google
 https://github.com/google/gson
 
-[JARダウンロードはこちら](http://repo1.maven.org/maven2/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar)
+[JARダウンロードはこちら](https://maven-badges.herokuapp.com/maven-central/com.google.code.gson/gson)
+
+### Gradle
+
+```
+compile 'com.google.code.gson:gson:2.8.2'
+```
 
 
 ## Okhttp - square
@@ -14,10 +20,34 @@ https://github.com/square/okhttp
 
 [JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.okhttp3&a=okhttp&v=LATEST)
 
+### Gradle
+
+```
+compile 'com.squareup.okhttp3:okhttp:3.9.0'
+```
+
 ## Okio - square
 https://github.com/square/okio
 
 [JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.okio&a=okio&v=LATEST)
+
+### Gradle
+
+```
+compile 'com.squareup.okio:okio:1.13.0'
+```
+
+## Retrofit - square
+https://github.com/square/retrofit
+
+[JARダウンロードはこちら](https://search.maven.org/remote_content?g=com.squareup.retrofit2&a=retrofit&v=LATEST)
+
+
+### Gradle
+
+```
+compile 'com.squareup.retrofit2:retrofit:2.3.0'
+```
 
 ## 説明資料
 [Okhttp + Gson を使ったJavaによるWebAPI入門](http://nshiba.hatenablog.com/entry/2016/11/22/003111)
