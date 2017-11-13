@@ -64,6 +64,28 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 |username|任意の名前|
 |password|ログイン用のパスワード|
 
+
+### [GET]<a id="authentication>is_auth</a>
+	
+作成したユーザのアクセストークンを使って認証を行う
+
+<使用例>
+
+`GET http://api-atcolor.cps.im.dendai.ac.jp/v1/is_auth`
+```
+{
+	"message": "Your Authentication OK! \"naoya\""
+}
+```
+
+#### フィールド
+なし
+
+#### ヘッダ
+|名前|概要|
+|:--|:--|
+|authentication|登録時に生成したアクセストークン|
+
 ### [GET] <a id="users">users</a>
 
 全てのユーザ情報を取得する
