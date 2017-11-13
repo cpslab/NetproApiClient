@@ -20,28 +20,34 @@ public class Main {
     };
 
     public static void main(String[] args) {
-        fetchUsers();
-        register();
-        login();
+//        fetchUsers();
+//        register();
+//        login();
+//        authentication();
     }
 
+    // TODO: Tutorial1
     private static void fetchUsers() {
         OkhttpApiClient okhttpApiClient = new OkhttpApiClient();
         okhttpApiClient.fetchUsers(callback);
     }
 
+    // TODO: Tutorial2
     private static void register() {
         OkhttpApiClient okhttpApiClient = new OkhttpApiClient();
-        okhttpApiClient.registerUser("naoya", "naoya1234", callback);
+        okhttpApiClient.registerUser("netpro", "netpro1234", callback);
     }
 
+    // TODO: Tutorial3
     private static void login() {
         OkhttpApiClient okhttpApiClient = new OkhttpApiClient();
-        okhttpApiClient.login("naoya", "naoya1234", callback);
+        okhttpApiClient.login("netpro", "netpro1234", callback);
     }
 
+    // TODO: Tutorial4
     private static void authentication() {
-        // TODO: 2017/11/13 endpointどうするか
+        OkhttpApiClient okhttpApiClient = new OkhttpApiClient();
+        okhttpApiClient.authentication("your token", callback);
     }
 
 }

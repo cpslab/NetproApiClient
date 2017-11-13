@@ -18,41 +18,68 @@ public class OkhttpApiClient {
     private Gson gson = new Gson();
 
     public void fetchUsers(ApiClientCallback callback) {
-        HttpUrl.Builder builder = buildUrl()
-                .addPathSegment("users");
-        get(builder, callback);
+        HttpUrl url = buildUrl()
+                .addPathSegment("users")
+                .build();
+        get(url, callback);
     }
 
     public void registerUser(String name, String password, ApiClientCallback callback) {
-        HttpUrl.Builder builder = buildUrl()
-                .addPathSegment("register");
+        HttpUrl url = buildUrl()
+                .addPathSegment("register")
+                .build();
         RequestBody formBody = new FormBody.Builder()
                 .add("username", name)
                 .add("password", password)
                 .build();
-        post(builder, formBody, callback);
+        post(url, formBody, callback);
     }
 
     public void login(String name, String password, ApiClientCallback callback) {
-        HttpUrl.Builder builder = buildUrl()
-                .addPathSegment("login");
+        HttpUrl url = buildUrl()
+                .addPathSegment("login")
+                .build();
         RequestBody formBody = new FormBody.Builder()
                 .add("username", name)
                 .add("password", password)
                 .build();
-        post(builder, formBody, callback);
+        post(url, formBody, callback);
     }
 
-    private void get(HttpUrl.Builder builder, ApiClientCallback apiClientCallback) {
+    public void authentication(String token, ApiClientCallback callback) {
+        HttpUrl url = buildUrl()
+                .addPathSegment("is_auth")
+                .build();
+        Headers headers = Headers.of("Authentication", token);
+        get(url, headers, callback);
+    }
+
+    private void get(HttpUrl url, ApiClientCallback apiClientCallback) {
         request = new Request.Builder()
-                .url(builder.build())
+                .url(url)
                 .get().build();
         enqueue(request, apiClientCallback);
     }
 
-    private void post(HttpUrl.Builder builder, RequestBody body, ApiClientCallback apiClientCallback) {
+    private void get(HttpUrl url, Headers headers, ApiClientCallback apiClientCallback) {
         request = new Request.Builder()
-                .url(builder.build())
+                .url(url)
+                .headers(headers)
+                .get().build();
+        enqueue(request, apiClientCallback);
+    }
+
+    private void post(HttpUrl url, RequestBody body, ApiClientCallback apiClientCallback) {
+        request = new Request.Builder()
+                .url(url)
+                .post(body).build();
+        enqueue(request, apiClientCallback);
+    }
+
+    private void post(HttpUrl url, Headers headers, RequestBody body, ApiClientCallback apiClientCallback) {
+        request = new Request.Builder()
+                .url(url)
+                .headers(headers)
                 .post(body).build();
         enqueue(request, apiClientCallback);
     }
