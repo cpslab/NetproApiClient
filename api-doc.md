@@ -13,11 +13,12 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 - [[GET]   questions](#questions)
 - [[PUT]   users/:id](#users/:id)
 - [[PUT]   users](#users)
-- [[PUT]   pixel](#pixel)
+- [[PUT]   pixels](#putPixels)
 
 ### [POST]<a id="register">register</a>
 
 ユーザを登録する
+
 <使用例>
 
 `POST http://api-atcolor.cps.im.dendai.ac.jp/v1/register `
@@ -217,7 +218,7 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 |:--|:--|
 |authentication|登録時に生成したアクセストークン|
 
-### [PUT] <a id="pixels">pixels</a>
+### [PUT] <a id="putPixels">pixels</a>
 指定した座標に色を設定する
 
 <使用例>
