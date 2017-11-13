@@ -9,6 +9,7 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 ## リクエスト一覧
 - [[POST]  register](#register)
 - [[POST]  login](#login)
+- [[GET]   is_auth](#authentication)
 - [[GET]   users](#users)
 - [[GET]   pixels](#pixels)
 - [[GET]   questions](#questions)
@@ -235,11 +236,6 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 |:--|:--|
 |twitter|twitterID|
 |language|得意な言語|
-
-#### ヘッダ
-|名前|概要|
-|:--|:--|
-|authentication|登録時に生成したアクセストークン|
 
 ### [PUT] <a id="putPixels">pixels</a>
 指定した座標に色を設定する
