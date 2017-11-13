@@ -1,11 +1,11 @@
-package network;
+package cps.network;
 
 import com.google.gson.Gson;
 import okhttp3.*;
 
 import java.io.IOException;
 
-import static network.ApiConsts.*;
+import static cps.network.ApiConsts.*;
 
 public class OkhttpApiClient {
 
@@ -16,25 +16,48 @@ public class OkhttpApiClient {
     private Request request;
 
     private Gson gson = new Gson();
-    
 
-    /**
-     * locationCodeは↓を参照
-     * http://weather.livedoor.com/forecast/rss/primary_area.xml
-     *
-     * @param locationCode
-     */
-    public void getWeather(int locationCode, ApiClientCallback apiClientCallback) {
-        HttpUrl.Builder builder = buildUrl();
-        builder.addQueryParameter("city", String.valueOf(locationCode));
-        enqueue(builder, apiClientCallback);
+    public void fetchUsers(ApiClientCallback callback) {
+        HttpUrl.Builder builder = buildUrl()
+                .addPathSegment("users");
+        get(builder, callback);
     }
 
-    private void enqueue(HttpUrl.Builder builder, ApiClientCallback apiClientCallback) {
+    public void registerUser(String name, String password, ApiClientCallback callback) {
+        HttpUrl.Builder builder = buildUrl()
+                .addPathSegment("register");
+        RequestBody formBody = new FormBody.Builder()
+                .add("username", name)
+                .add("password", password)
+                .build();
+        post(builder, formBody, callback);
+    }
+
+    public void login(String name, String password, ApiClientCallback callback) {
+        HttpUrl.Builder builder = buildUrl()
+                .addPathSegment("login");
+        RequestBody formBody = new FormBody.Builder()
+                .add("username", name)
+                .add("password", password)
+                .build();
+        post(builder, formBody, callback);
+    }
+
+    private void get(HttpUrl.Builder builder, ApiClientCallback apiClientCallback) {
         request = new Request.Builder()
                 .url(builder.build())
                 .get().build();
+        enqueue(request, apiClientCallback);
+    }
 
+    private void post(HttpUrl.Builder builder, RequestBody body, ApiClientCallback apiClientCallback) {
+        request = new Request.Builder()
+                .url(builder.build())
+                .post(body).build();
+        enqueue(request, apiClientCallback);
+    }
+
+    private void enqueue(Request request, ApiClientCallback apiClientCallback) {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -76,9 +99,6 @@ public class OkhttpApiClient {
         return new HttpUrl.Builder()
                 .scheme(SCHEME)
                 .host(HOST)
-                .addPathSegment(FORECAST)
-                .addPathSegment(WEB_SERVICE)
-                .addPathSegment(JSON)
                 .addPathSegment(ROOT);
     }
 }
