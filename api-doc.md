@@ -142,7 +142,7 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 
 <使用例>
 
-`GET http://api-atcolor.cps.im.dendai.ac.jp/v1/questions`
+`GET http://api-atcolor.cps.im.dendai.ac.jp/v1/q`
 ```
 [  
 	{  
