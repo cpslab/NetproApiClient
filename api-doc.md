@@ -66,7 +66,7 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 |password|ログイン用のパスワード|
 
 
-### [GET]<a id="authentication>is_auth</a>
+### [GET]<a id="authentication">is_auth</a>
 	
 作成したユーザのアクセストークンを使って認証を行う
 
