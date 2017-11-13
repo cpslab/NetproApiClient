@@ -11,8 +11,8 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 - [[GET]   users](#users)
 - [[GET]   pixels](#pixels)
 - [[GET]   questions](#questions)
-- [[PUT]   users/:id](#users/:id)
-- [[PUT]   users](#users)
+- [[GET]   users/:id](#users/:id)
+- [[PUT]   users](#putUsers)
 - [[PUT]   pixels](#putPixels)
 
 ### [POST]<a id="register">register</a>
@@ -180,7 +180,7 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 #### フィールド
 なし
 
-### [PUT] <a id="users">users</a>
+### [PUT] <a id="putUsers">users</a>
 作成したユーザのプロフィールを更新する
 
 <使用例>
