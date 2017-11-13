@@ -3,6 +3,7 @@
 `http://api-atcolor.cps.im.dendai.ac.jp`
 
 このベースのURLの後にエンドポイントのパスを記述してAPIにアクセスする.
+
 ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 
 ## リクエスト一覧
