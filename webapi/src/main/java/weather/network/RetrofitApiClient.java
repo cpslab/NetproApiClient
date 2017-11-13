@@ -1,11 +1,11 @@
-package network;
+package weather.network;
 
-import entity.WeatherEntity;
+import weather.entity.WeatherEntity;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-import static network.ApiConsts.*;
+import static weather.network.ApiConsts.*;
 
 public interface RetrofitApiClient {
 
