@@ -1,4 +1,4 @@
-package network;
+package weather.network;
 
 public class ApiConsts {
 

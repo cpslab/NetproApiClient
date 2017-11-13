@@ -1,12 +1,14 @@
+package weather;
+
 import java.io.IOException;
 
 import com.google.gson.Gson;
-import entity.ForecastEntity;
-import entity.WeatherEntity;
-import network.ApiConsts;
-import network.OkhttpApiClient;
-import network.OkhttpApiClient.ApiClientCallback;
-import network.RetrofitApiClient;
+import weather.entity.ForecastEntity;
+import weather.entity.WeatherEntity;
+import weather.network.ApiConsts;
+import weather.network.OkhttpApiClient;
+import weather.network.OkhttpApiClient.ApiClientCallback;
+import weather.network.RetrofitApiClient;
 import okhttp3.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

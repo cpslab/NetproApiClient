@@ -1,11 +1,11 @@
-package network;
+package weather.network;
 
 import com.google.gson.Gson;
 import okhttp3.*;
 
 import java.io.IOException;
 
-import static network.ApiConsts.*;
+import static weather.network.ApiConsts.*;
 
 public class OkhttpApiClient {
 

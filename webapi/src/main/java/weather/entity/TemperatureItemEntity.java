@@ -1,4 +1,4 @@
-package entity;
+package weather.entity;
 
 import com.google.gson.annotations.SerializedName;
 
