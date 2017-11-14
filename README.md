@@ -49,6 +49,17 @@ https://github.com/square/retrofit
 compile 'com.squareup.retrofit2:retrofit:2.3.0'
 ```
 
+## Gson Converter Factory - square
+https://github.com/square/retrofit/tree/master/retrofit-converters/gson
+
+[JARダウンロードはこちら](https://repo2.maven.org/maven2/com/squareup/retrofit2/converter-gson/2.3.0/converter-gson-2.3.0.jar)
+
+### Gradle
+
+```
+compile 'com.squareup.retrofit2:converter-gson:latest.version'
+```
+
 ## 説明資料
 [Okhttp + Gson を使ったJavaによるWebAPI入門](http://nshiba.hatenablog.com/entry/2016/11/22/003111)
 
