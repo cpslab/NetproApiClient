@@ -261,4 +261,4 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 ### ヘッダ
 |名前|概要|
 |:--|:--|
-|authentication|登録時に生成したアクセストークン|
+|authorization|登録時に生成したアクセストークン|
