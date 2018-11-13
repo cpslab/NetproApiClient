@@ -254,8 +254,8 @@ ex.) `GET http://api-atcolor.cps.im.dendai.ac.jp/v1/login`
 #### フィールド
 |名前|概要|
 |:--|:--|
-|x|x座標の値|
-|y|y座標の値|
+|x|x座標の値 (0~63)|
+|y|y座標の値 (0~63)|
 |color|色|
 
 ### ヘッダ
