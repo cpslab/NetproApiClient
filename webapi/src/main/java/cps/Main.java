@@ -20,34 +20,26 @@ public class Main {
     };
 
     public static void main(String[] args) {
-//        fetchUsers();
-//        register();
-//        login();
-//        authentication();
+//        gethttpHeader();
+//          postData();
+          putData();
     }
 
-    // TODO: Tutorial1
-    private static void fetchUsers() {
+    // このPCから送られたhttpヘッダを確認してみよう
+    private static void gethttpHeader() {
         OkhttpApiClient okhttpApiClient = new OkhttpApiClient();
-        okhttpApiClient.fetchUsers(callback);
+        okhttpApiClient.httpHeader(callback);
     }
 
-    // TODO: Tutorial2
-    private static void register() {
+    // 名前とパスワードを送ってみよう(適当な値で大丈夫です)
+    private static void postData() {
         OkhttpApiClient okhttpApiClient = new OkhttpApiClient();
-        okhttpApiClient.registerUser("netpro", "netpro1234", callback);
+        okhttpApiClient.sendData("netpro", "netpro1234", callback);
     }
 
-    // TODO: Tutorial3
-    private static void login() {
+    private static void putData() {
         OkhttpApiClient okhttpApiClient = new OkhttpApiClient();
-        okhttpApiClient.login("netpro", "netpro1234", callback);
-    }
-
-    // TODO: Tutorial4
-    private static void authentication() {
-        OkhttpApiClient okhttpApiClient = new OkhttpApiClient();
-        okhttpApiClient.authentication("your token", callback);
+        okhttpApiClient.putData(callback);
     }
 
 }
